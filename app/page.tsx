@@ -1,9 +1,17 @@
-import { UserButton } from "@clerk/nextjs";
+"use client"
 
-export default function Home() {
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+
+export default function HomePage() {
   return (
-    <div>
-      <UserButton afterSignOutUrl="/" />
-    </div>
+    <>
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <Hero />
+      </div>
+    </>
   )
 }

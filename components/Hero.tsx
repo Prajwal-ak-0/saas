@@ -1,10 +1,16 @@
-import React from 'react'
+"use client"
+
+import { Bot } from '@/models/Bot'
+import { Brain } from '@/models/Brain'
+import { OrbitControls, Preload } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import React, { Suspense } from 'react'
 
 const Hero = () => {
     return (
         <>
-            <div className='sm:flex hidden'>
-                <div className='w-1/2 mt-32 pl-32'>
+            <div className='sm:flex hidden h-screen'>
+                <div className='w-[40%] mt-24 pl-16'>
                     <div>
                         <h1 className='font-bold lg:text-6xl md:text-4xl w-fit'>
                             Welcome to
@@ -13,9 +19,36 @@ const Hero = () => {
                             AI Studio!
                         </h1>
                     </div>
+                    <div className='mt-20 -ml-12 -mr-12 font-semibold'>
+                        <h1 className='text-4xl leading-relaxed text-center'>
+                            <span className='text-5xl text-[#D801CF]'>" </span> Forge the future with AI Studio,
+                            Where Intelligence meets Innovation. <span className='text-5xl text-[#D801CF]'> "</span>
+                        </h1>
+                    </div>
                 </div>
-                <div className='w-1/2 '>
-
+                <div className='w-[60%] '>
+                    <Canvas >
+                        <Suspense >
+                            <spotLight
+                                position={[10, 10, 10]}
+                                angle={0.15}
+                                penumbra={1}
+                                intensity={1}
+                                castShadow
+                            />
+                            <OrbitControls
+                                enableZoom={false}
+                                maxPolarAngle={Math.PI / 2 - 0.1}
+                                minPolarAngle={Math.PI / 2 - 0.1}
+                            />
+                            <Bot
+                                scale={1.8}
+                                animationSpeed={0.5}
+                                position={[0, -1, 0]}
+                            />
+                        </Suspense>
+                        <Preload all />
+                    </Canvas>
                 </div>
             </div>
             <div className='sm:hidden mt-10 flex flex-col'>
