@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
     return (
-        <div className="flex w-full h-24 shadow-md justify-between">
+        <div className="flex w-full h-24 shadow-lg fixed z-10 bg-white justify-between">
             <div className="">
                 <Image
                     src="/images/logo.png"
