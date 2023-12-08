@@ -21,8 +21,8 @@ const Hero = () => {
                     </div>
                     <div className='mt-20 -ml-12 -mr-12 font-semibold'>
                         <h1 className='text-4xl leading-relaxed text-center'>
-                            <span className='text-5xl text-[#D801CF]'>" </span> Forge the future with AI Studio,
-                            Where Intelligence meets Innovation. <span className='text-5xl text-[#D801CF]'> "</span>
+                            <span className='text-5xl text-[#D801CF]'>&quot; </span> Forge the future with AI Studio,
+                            Where Intelligence meets Innovation. <span className='text-5xl text-[#D801CF]'> &quot;</span>
                         </h1>
                     </div>
                 </div>
