@@ -5,11 +5,12 @@ import { Brain } from '@/models/Brain'
 import { OrbitControls, Preload } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React, { Suspense } from 'react'
+import Features from './Features'
 
 const Hero = () => {
     return (
         <>
-            <div className='sm:flex hidden '>
+            <div className='sm:flex hidden pt-28'>
                 <div className='w-[40%] mt-24 pl-16'>
                     <div>
                         <h1 className='font-bold lg:text-6xl md:text-4xl w-fit'>
@@ -51,34 +52,8 @@ const Hero = () => {
                     </Canvas>
                 </div>
             </div>
-            <div className='w-full h-screen pl-16' >
-                <h1 className='text-5xl font-bold'>
-                    Feature&apos;s Highlights :
-                </h1>
-                <div className='right-0 h-[500px] w-[500px] items-center justify-center'>
-                    <Canvas >
-                        <Suspense >
-                            <spotLight
-                                position={[10, 10, 10]}
-                                angle={0.15}
-                                penumbra={1}
-                                intensity={1}
-                                castShadow
-                            />
-                            <OrbitControls
-                                enableZoom={false}
-                                maxPolarAngle={Math.PI / 2 - 0.1}
-                                minPolarAngle={Math.PI / 2 - 0.1}
-                            />
-                            <Brain
-                                scale={1.2}
-                                animationSpeed={0.5}
-                                position={[0, -2.5, 0]}
-                            />
-                        </Suspense>
-                        <Preload all />
-                    </Canvas>
-                </div>
+            <div className='-mt-8'>
+                <Features/>
             </div>
             <div className='sm:hidden mt-10 flex flex-col'>
                 <div className='w-full pl-16'>
