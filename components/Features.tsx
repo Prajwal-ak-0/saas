@@ -8,7 +8,7 @@ import React, { Suspense } from 'react'
 const Features = () => {
   return (
     <>
-      <div className='max-lg:hidden'>
+      <div className='max-lg:hidden mt-16'>
         <h1 className='text-5xl font-bold pl-16 '>
           Feature&apos;s Highlights :
         </h1>
@@ -67,8 +67,8 @@ const Features = () => {
         </div>
       </div>
 
-      <div className='lg:hidden'>
-        <h1 className='text-4xl font-semibold pl-4 mt-8'>
+      <div className='lg:hidden '>
+        <h1 className='text-4xl  font-semibold pl-4 mt-8'>
           Feature&apos; Highlights :
         </h1>
 
