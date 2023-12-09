@@ -10,7 +10,7 @@ import Features from './Features'
 const Hero = () => {
     return (
         <div className='w-screen'>
-            <div className='sm:flex hidden pt-28'>
+            <div className='lg:flex hidden pt-28'>
                 <div className='w-[40%] mt-24 pl-16'>
                     <div>
                         <h1 className='font-bold lg:text-6xl md:text-4xl w-fit'>
@@ -53,20 +53,20 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className=''>
+            <div className='lg:hidden'>
                 <div className='h-10'>
                     {/* MOBILE NAVBAR */}
                 </div>
-                <div className='pl-1 mt-12 mx-auto w-fit'>
-                    <h1 className='font-semibold text-4xl'>
+                <div className='pl-1 sm:pt-16 mt-12 mx-auto w-fit'>
+                    <h1 className='font-semibold sm:text-6xl text-4xl'>
                         Welcome to :
                     </h1>
-                    <h1 className='font-bold text-5xl pl-6 text-[#D801CF]'>
+                    <h1 className='font-bold sm:text-7xl text-5xl sm:pl-12 pl-6 text-[#D801CF]'>
                         AI Studio!
                     </h1>
                 </div>
 
-                <div className='w-full h-[300px] -mt-12 mx-auto'>
+                <div className='w-full h-[300px] sm:h-[400px] -mt-12 mx-auto'>
                     <Canvas >
                         <Suspense >
                             <spotLight
@@ -92,9 +92,9 @@ const Hero = () => {
                 </div>
 
                 <div className='w-full px-12 mt-4'>
-                    <h1 className='font-medium text-center text-2xl'>
-                        <span className=' text-[#D801CF] font-extrabold text-2xl'>&quot; </span> Forge the future with AI Studio,
-                        Where Intelligence meets Innovation. <span className='text-[#D801CF] font-extrabold text-2xl -mt-2 '> &quot;</span>
+                    <h1 className='font-medium text-center text-2xl sm:text-3xl'>
+                        <span className=' text-[#D801CF] font-extrabold text-2xl sm:text-4xl'>&quot; </span> Forge the future with AI Studio,
+                        Where Intelligence meets Innovation. <span className='text-[#D801CF] font-extrabold text-2xl sm:text-4xl -mt-2 '> &quot;</span>
                     </h1>
                 </div>
 
@@ -103,9 +103,9 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* <div className='-mt-8'>
-                <Features/>
-            </div> */}
+            <div className='max-lg:hidden -mt-8'>
+                <Features />
+            </div>
         </div>
     )
 }
