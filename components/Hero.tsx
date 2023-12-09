@@ -9,7 +9,7 @@ import Features from './Features'
 
 const Hero = () => {
     return (
-        <div className='w-fit'>
+        <div className='w-screen'>
             <div className='sm:flex hidden pt-28'>
                 <div className='w-[40%] mt-24 pl-16'>
                     <div>
@@ -57,16 +57,16 @@ const Hero = () => {
                 <div className='h-10'>
                     {/* MOBILE NAVBAR */}
                 </div>
-                <div className='pl-1 w-fit'>
-                    <h1 className='font-semibold text-xl'>
+                <div className='pl-1 mt-12 mx-auto w-fit'>
+                    <h1 className='font-semibold text-4xl'>
                         Welcome to :
                     </h1>
-                    <h1 className='font-bold text-2xl pl-6 text-[#D801CF]'>
+                    <h1 className='font-bold text-5xl pl-6 text-[#D801CF]'>
                         AI Studio!
                     </h1>
                 </div>
 
-                <div className='w-[140px] -mt-6 h-[120px] ml-1'>
+                <div className='w-full h-[300px] -mt-12 mx-auto'>
                     <Canvas >
                         <Suspense >
                             <spotLight
@@ -91,10 +91,10 @@ const Hero = () => {
                     </Canvas>
                 </div>
 
-                <div className='w-[140px] font-medium mt-2'>
-                    <h1 className=' text-center text-[10px] hover:text-sm'>
-                        <span className=' text-[#D801CF] font-extrabold text-lg'>&quot; </span> Forge the future with AI Studio,
-                        Where Intelligence meets Innovation. <span className='text-[#D801CF] font-extrabold text-lg -mt-2 '> &quot;</span>
+                <div className='w-full px-12 mt-4'>
+                    <h1 className='font-medium text-center text-2xl'>
+                        <span className=' text-[#D801CF] font-extrabold text-2xl'>&quot; </span> Forge the future with AI Studio,
+                        Where Intelligence meets Innovation. <span className='text-[#D801CF] font-extrabold text-2xl -mt-2 '> &quot;</span>
                     </h1>
                 </div>
 

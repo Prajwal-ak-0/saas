@@ -66,12 +66,13 @@ const Features = () => {
           </div>
         </div>
       </div>
+
       <div className='sm:hidden'>
-        <h1 className='text-[12px] font-semibold pl-1 mt-2'>
+        <h1 className='text-2xl font-semibold pl-4 mt-6'>
           Feature&apos; Highlights :
         </h1>
 
-        <div className='w-[140px] mx-auto'>
+        <div className='h-[260px]'>
           <Canvas >
             <Suspense >
               <spotLight
@@ -87,40 +88,42 @@ const Features = () => {
                 minPolarAngle={Math.PI / 2 - 0.1}
               />
               <Brain
-                scale={1.2}
+                scale={1.3}
                 animationSpeed={0.5}
-                position={[0, -2.5, 0]}
+                position={[0, -2.8, 0]}
               />
             </Suspense>
             <Preload all />
           </Canvas>
         </div>
 
-        <div className='w-[140px] items-center mx-auto mt-2 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-1 rounded-sm bg-neutral-200'>
-          <h1 className='text-[8px] '>
-            <span className='font-semibold text-[10px]'>
-              1. AI at Your Fingertips :<br />
-            </span>
-            From text and image processing to code generation, access a suite of AI services effortlessly.
-          </h1>
-        </div>
+        <div className='h-[550px]'>
+          <div className='w-[330px] items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200'>
+            <h1 className='text-[14px] '>
+              <span className='font-semibold text-[16px]'>
+                1. AI at Your Fingertips :<br />
+              </span>
+              From text and image processing to code generation, access a suite of AI services effortlessly.
+            </h1>
+          </div>
 
-        <div className='w-[140px] items-center mx-auto mt-2 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-1 rounded-sm bg-neutral-200'>
-          <h1 className='text-[8px] '>
-            <span className='font-semibold text-[10px]'>
-              2. Innovate with Confidence:<br />
-            </span>
-            AI Studio ensures secure and ethical AI solutions for your projects.
-          </h1>
-        </div>
+          <div className='w-[330px] items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200'>
+            <h1 className='text-[14px] '>
+              <span className='font-semibold text-[16px]'>
+                2. Innovate with Confidence:<br />
+              </span>
+              AI Studio ensures secure and ethical AI solutions for your projects.
+            </h1>
+          </div>
 
-        <div className='w-[140px] items-center mx-auto mt-2 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-1 rounded-sm bg-neutral-200'>
-          <h1 className='text-[8px] '>
-            <span className='font-semibold text-[10px]'>
-              3.  Stay Ahead, Stay Informed:<br />
-            </span>
-            Get the latest in AI trends, news, and breakthroughs directly from AI Studio.
-          </h1>
+          <div className='w-[330px] items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200'>
+            <h1 className='text-[14px] '>
+              <span className='font-semibold text-[16px]'>
+                3.  Stay Ahead, Stay Informed:<br />
+              </span>
+              Get the latest in AI trends, news, and breakthroughs directly from AI Studio.
+            </h1>
+          </div>
         </div>
       </div>
     </>
