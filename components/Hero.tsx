@@ -9,7 +9,7 @@ import Features from './Features'
 
 const Hero = () => {
     return (
-        <>
+        <div className='w-fit'>
             <div className='sm:flex hidden pt-28'>
                 <div className='w-[40%] mt-24 pl-16'>
                     <div>
@@ -52,25 +52,61 @@ const Hero = () => {
                     </Canvas>
                 </div>
             </div>
-            <div className='-mt-8'>
-                <Features/>
-            </div>
-            <div className='sm:hidden mt-10 flex flex-col'>
-                <div className='w-full pl-16'>
-                    <div>
-                        <h1 className='font-bold text-5xl w-fit'>
-                            Welcome to
-                        </h1>
-                        <h1 className='ml-20 text-6xl text-[#D801CF] font-extrabold w-fit'>
-                            AI Studio!
-                        </h1>
-                    </div>
-                </div>
-                <div className='w-full'>
 
+            <div className=''>
+                <div className='h-10'>
+                    {/* MOBILE NAVBAR */}
+                </div>
+                <div className='pl-1 w-fit'>
+                    <h1 className='font-semibold text-xl'>
+                        Welcome to :
+                    </h1>
+                    <h1 className='font-bold text-2xl pl-6 text-[#D801CF]'>
+                        AI Studio!
+                    </h1>
+                </div>
+
+                <div className='w-[140px] -mt-6 h-[120px] ml-1'>
+                    <Canvas >
+                        <Suspense >
+                            <spotLight
+                                position={[10, 10, 10]}
+                                angle={0.15}
+                                penumbra={1}
+                                intensity={1}
+                                castShadow
+                            />
+                            <OrbitControls
+                                enableZoom={false}
+                                maxPolarAngle={Math.PI / 2 - 0.1}
+                                minPolarAngle={Math.PI / 2 - 0.1}
+                            />
+                            <Bot
+                                scale={2}
+                                animationSpeed={0.5}
+                                position={[0, -2, 0]}
+                            />
+                        </Suspense>
+                        <Preload all />
+                    </Canvas>
+                </div>
+
+                <div className='w-[140px] font-medium mt-2'>
+                    <h1 className=' text-center text-[10px] hover:text-sm'>
+                        <span className=' text-[#D801CF] font-extrabold text-lg'>&quot; </span> Forge the future with AI Studio,
+                        Where Intelligence meets Innovation. <span className='text-[#D801CF] font-extrabold text-lg -mt-2 '> &quot;</span>
+                    </h1>
+                </div>
+
+                <div className=''>
+                    <Features />
                 </div>
             </div>
-        </>
+
+            {/* <div className='-mt-8'>
+                <Features/>
+            </div> */}
+        </div>
     )
 }
 
