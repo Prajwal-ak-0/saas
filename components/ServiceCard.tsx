@@ -72,7 +72,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 </div>
             </div>
 
-            <div className='sm:hidden bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 px-2 rounded-lg bg-neutral-200'>
+            <div className='sm:hidden bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-lg bg-neutral-200'>
                 <div className='flex flex-row gap-4'>
                     <Image
                         src={image}

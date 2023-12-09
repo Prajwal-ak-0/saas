@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       <TopServices/>
     </>
   )
