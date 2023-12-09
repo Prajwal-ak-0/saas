@@ -19,16 +19,15 @@ const services = [
     },
 ]
 
-
 const TopServices = () => {
     return (
         <div>
             <div className=''>
-                <h1 className='text-5xl font-bold pl-16 '>
+                <h1 className='text-5xl font-bold pl-8 '>
                     Top Service&apos;s:
                 </h1>
             </div>
-            <div className='flex'>
+            <div className='grid grid-rows-1 md:grid-cols-3 gap-2 lg:mx-12 md:mx-6  my-8'>
                 {services.map((service, idx) => (
                     <div key={idx} className=''>
                         <ServiceCard
