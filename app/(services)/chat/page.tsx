@@ -126,14 +126,14 @@ const ConversationPage = () => {
               </>
             ) : (
               <>
-                <div className="flex flex-col gap-y-4 h-[calc(100vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
+                <div className="flex flex-col gap-y-4 h-[calc(94vh-200px)] sm:h-[calc(100vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
                   {messages.map((message, index) => (
                     <div
                       key={index}
                       ref={index === messages.length - 1 ? lastMessageRef : null}
                       className={cn(
-                        "p-8 w-full flex items-start gap-x-8 rounded-lg",
-                        message.role === "user" ? "bg-white border border-black/10" : "bg-muted",
+                        "p-4 w-full flex items-start gap-x-4 rounded-lg",
+                        message.role === "user" ? "bg-emerald-50 border border-black/10" : "bg-purple-100",
                       )}
                     >
                       {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
@@ -156,8 +156,9 @@ const ConversationPage = () => {
               onSubmit={form.handleSubmit(onSubmit)}
               className="
             rounded-lg
+            mx-4
+            mb-4
             border
-            w-full
             px-3
             md:px-8
             focus-within:shadow-sm

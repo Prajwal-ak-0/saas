@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Button } from './ui/button'
 import { MoveUpRight } from 'lucide-react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 interface ServiceCardProps {
@@ -12,7 +12,7 @@ interface ServiceCardProps {
     description: string
     image: string
     onClick: () => void
-    link:string
+    link: string
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     onClick,
     link
 }) => {
-
+    const router = useRouter();
     return (
         <>
             <div className='max-md:hidden'>
@@ -44,10 +44,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                             </h1>
                         </div>
                         <div>
-                            <Button variant={"secondary"} className='flex mt-2'>
-                                Try Now
-                                <MoveUpRight className='ml-2' size={16} />
-                            </Button>
+                            <Link href={`${link}`}>
+                                <Button variant={"secondary"} className='flex mt-2'>
+                                    Try Now
+                                    <MoveUpRight className='ml-2' size={16} />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -71,19 +73,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                         </h1>
                         <div>
                             <Link href={`${link}`}>
-                            <Button  variant={"secondary"} className='flex mt-2'>
-                                Try Now
-                                <MoveUpRight className='ml-2' size={16} />
-                            </Button>
+                                <Button variant={"secondary"} className='flex mt-2'>
+                                    Try Now
+                                    <MoveUpRight className='ml-2' size={16} />
+                                </Button>
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className='sm:hidden bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-lg bg-neutral-200'>
+            <div className='sm:hidden bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 px-4 py-2 rounded-lg bg-neutral-200'>
                 <div className='flex flex-row gap-4'>
                     <Image
+                        onClick={() => router.push(`${link}`)}
                         src={image}
                         width={100}
                         height={100}

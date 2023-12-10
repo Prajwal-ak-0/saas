@@ -6,9 +6,9 @@ export function Message(props) {
   const { nodes, materials } = useGLTF("/3d/message.glb");
 
   // Change color for each material
-  const material1 = new MeshBasicMaterial({ color: 0xDB3ED5 }); // Red color
-  const material2 = new MeshBasicMaterial({ color: 0xffffff }); // White color
-  const material3 = new MeshBasicMaterial({ color: 0x000000 }); // Black color
+  const material1 = new MeshBasicMaterial({ color: 0xDB3ED1 }); 
+  const material2 = new MeshBasicMaterial({ color: 0xffffff }); 
+  const material3 = new MeshBasicMaterial({ color: 0x000000 }); 
 
   return (
     <group {...props} dispose={null}>

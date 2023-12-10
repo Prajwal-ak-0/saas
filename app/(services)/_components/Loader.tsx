@@ -6,7 +6,7 @@ export const Loader = () => {
       <div className="w-10 h-10 relative animate-spin">
         <Image
           alt="Logo"
-          src="/images/fav_logo.png"
+          src="/images/icon_logo.png"
           fill
         />
       </div>

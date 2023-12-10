@@ -19,7 +19,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <head>
-          <link rel="icon" href="/images/fav_logo.png" />
+          <link rel="icon" href="/images/icon_logo.png" />
         </head>
         <body className={inter.className}>
           {children}
