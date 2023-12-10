@@ -27,11 +27,11 @@ const Navbar = () => {
             </div>
             <div className="flex max-sm:hidden  gap-6 my-auto mr-8">
                 <Button variant={"secondary"}>
-                    Login
+                    Explore
                 </Button>
-                <Button variant={"primary"}>
+                {/* <Button variant={"primary"}>
                     SignUp
-                </Button>
+                </Button> */}
             </div>
             <div className="sm:hidden">
                 <Usermenu />
