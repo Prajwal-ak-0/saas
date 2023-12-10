@@ -68,8 +68,8 @@ const Features = () => {
       </div>
 
       <div className='lg:hidden '>
-        <h1 className='text-4xl  font-semibold pl-4 mt-8'>
-          Feature&apos; Highlights :
+        <h1 className='sm:text-4xl text-xl ml-4  font-bold pl-4 mt-8'>
+          Feature&apos;s Highlights :
         </h1>
 
         <div className='h-[260px] sm:h-[350px]'>
@@ -97,7 +97,7 @@ const Features = () => {
           </Canvas>
         </div>
 
-        <div className='h-[550px]'>
+        <div className='h-[370px]'>
           <div className='w-[330px] sm:w-[530px] items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200'>
             <h1 className='text-[14px] sm:text-[18px]'>
               <span className='font-semibold text-[16px] sm:text-[20px]'>
