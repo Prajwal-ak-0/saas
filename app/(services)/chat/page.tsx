@@ -4,11 +4,11 @@ import * as z from "zod";
 import axios from "axios";
 import { MessageSquare } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import  {ChatCompletionRequestMessage}  from "openai";
-
+import { ChatCompletionRequestMessage } from "openai";
+import React, { useRef, useEffect } from 'react';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,7 @@ import { Heading } from "../components/Heading";
 import { Loader } from "../components/Loader";
 import { UserAvatar } from "../components/UserAvatar";
 import { BotAvatar } from "../components/BotAvatar";
+import Navbar from "@/components/Navbar";
 
 const formSchema = z.object({
   prompt: z.string().min(1, {
@@ -28,6 +29,9 @@ const formSchema = z.object({
 });
 
 const ConversationPage = () => {
+  const messagesContainerRef = useRef<HTMLDivElement | null>(null);
+  const lastMessageRef = useRef<HTMLDivElement | null>(null);
+
   const router = useRouter();
   // const proModal = useProModal();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
@@ -39,16 +43,32 @@ const ConversationPage = () => {
     }
   });
 
+  const scrollToBottom = () => {
+    if (messagesContainerRef.current && lastMessageRef.current) {
+      const messagesContainer = messagesContainerRef.current;
+      const lastMessage = lastMessageRef.current;
+
+      const offset = lastMessage.offsetTop - messagesContainer.offsetTop;
+      messagesContainer.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  };
+
+  useLayoutEffect(() => {
+    requestAnimationFrame(() => {
+      scrollToBottom();
+    });
+  }, [messages]);
+
   const isLoading = form.formState.isSubmitting;
-  
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const userMessage: ChatCompletionRequestMessage = { role: "user", content: values.prompt };
       const newMessages = [...messages, userMessage];
-      
+
       const response = await axios.post('/api/chat', { messages: newMessages });
       setMessages((current) => [...current, userMessage, response.data]);
-      
+
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
@@ -61,33 +81,67 @@ const ConversationPage = () => {
     }
   }
 
-  return ( 
-    <div>
-      <Heading
-        title="Conversation"
-        description="Our most advanced conversation model."
-        Icon={MessageSquare}
-        iconColor="text-violet-500"
-        bgColor="bg-violet-500/10"
-      />
-      <div className="px-4 lg:px-8">
-        <div>
+  return (
+    <div className="h-screen">
+      <div className="pt-4">
+        <Heading
+          title="Conversation"
+          description="Our most advanced conversation model."
+          Icon={MessageSquare}
+          iconColor="text-violet-500"
+          bgColor="bg-violet-500/10"
+        />
+      </div>
+      <div>
+        <div className="px-4 lg:px-8">
+          <div className="space-y-4 mt-4">
+            {isLoading && (
+              <div className="p-8 rounded-lg w-full flex items-center justify-center bg-muted">
+                <Loader />
+              </div>
+            )}
+            {messages.length === 0 && !isLoading && (
+              <h1>
+                Start a conversation by typing a message above.
+              </h1>
+            )}
+            <div className="flex flex-col gap-y-4 h-[calc(100vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
+        {messages.map((message, index) => (
+          <div
+            key={index}
+            ref={index === messages.length - 1 ? lastMessageRef : null}
+            className={cn(
+              "p-8 w-full flex items-start gap-x-8 rounded-lg",
+              message.role === "user" ? "bg-white border border-black/10" : "bg-muted",
+            )}
+          >
+            {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
+            <p className="text-sm">
+              {message.content}
+            </p>
+          </div>
+        ))}
+      </div>
+
+          </div>
+        </div>
+        <div className="mb-auto">
+          {/* Move Form to Bottom */}
           <Form {...form}>
-            <form 
-              onSubmit={form.handleSubmit(onSubmit)} 
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
               className="
-                rounded-lg 
-                border 
-                w-full 
-                p-4 
-                px-3 
-                md:px-6 
-                focus-within:shadow-sm
-                grid
-                grid-cols-12
-                gap-2
-              "
+            rounded-lg
+            border
+            w-full
+            px-3
+            md:px-8
+            focus-within:shadow-sm
+            grid
+            grid-cols-12
+          "
             >
+              {/* Form Fields */}
               <FormField
                 name="prompt"
                 render={({ field }) => (
@@ -95,52 +149,25 @@ const ConversationPage = () => {
                     <FormControl className="m-0 p-0">
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                        disabled={isLoading} 
-                        placeholder="How do I calculate the radius of a circle?" 
+                        disabled={isLoading}
+                        placeholder="How do I calculate the radius of a circle?"
                         {...field}
                       />
                     </FormControl>
                   </FormItem>
                 )}
               />
+              {/* Submit Button */}
               <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
                 Generate
               </Button>
             </form>
           </Form>
         </div>
-        <div className="space-y-4 mt-4">
-          {isLoading && (
-            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-muted">
-              <Loader />
-            </div>
-          )}
-          {messages.length === 0 && !isLoading && (
-            <h1>
-              Start a conversation by typing a message above.
-            </h1>
-          )}
-          <div className="flex flex-col-reverse gap-y-4">
-            {messages.map((message) => (
-              <div 
-                key={message.content} 
-                className={cn(
-                  "p-8 w-full flex items-start gap-x-8 rounded-lg",
-                  message.role === "user" ? "bg-white border border-black/10" : "bg-muted",
-                )}
-              >
-                {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                <p className="text-sm">
-                  {message.content}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
-   );
+  );
 }
- 
+
 export default ConversationPage;
 
