@@ -96,8 +96,10 @@ const ConversationPage = () => {
         <div className="px-4 lg:px-8">
           <div className="space-y-4 mt-4">
             {isLoading && (
-              <div className="p-8 rounded-lg w-full flex items-center justify-center bg-muted">
-                <Loader />
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+                <div className="p-8 z-10 rounded-lg w-full max-w-xs bg-white">
+                  <Loader />
+                </div>
               </div>
             )}
             {messages.length === 0 && !isLoading && (
@@ -106,22 +108,22 @@ const ConversationPage = () => {
               </h1>
             )}
             <div className="flex flex-col gap-y-4 h-[calc(100vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            ref={index === messages.length - 1 ? lastMessageRef : null}
-            className={cn(
-              "p-8 w-full flex items-start gap-x-8 rounded-lg",
-              message.role === "user" ? "bg-white border border-black/10" : "bg-muted",
-            )}
-          >
-            {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-            <p className="text-sm">
-              {message.content}
-            </p>
-          </div>
-        ))}
-      </div>
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  ref={index === messages.length - 1 ? lastMessageRef : null}
+                  className={cn(
+                    "p-8 w-full flex items-start gap-x-8 rounded-lg",
+                    message.role === "user" ? "bg-white border border-black/10" : "bg-muted",
+                  )}
+                >
+                  {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
+                  <p className="text-sm">
+                    {message.content}
+                  </p>
+                </div>
+              ))}
+            </div>
 
           </div>
         </div>
