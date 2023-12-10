@@ -1,6 +1,6 @@
 # AI Studio
 
-Welcome to the AI Services Hub, your go-to platform for a diverse range of artificial intelligence services. Our web application offers a multitude of functionalities, harnessing the power of cutting-edge AI models to cater to your specific needs. From natural language processing with ChatGPT to creative content generation with image, code, audio, and video services, our platform is designed to provide an all-encompassing AI experience.
+Welcome to the AI Studio Hub, your go-to platform for a diverse range of artificial intelligence services. Our web application offers a multitude of functionalities, harnessing the power of cutting-edge AI models to cater to your specific needs. From natural language processing with ChatGPT to creative content generation with image, code, audio, and video services, our platform is designed to provide an all-encompassing AI experience.
 
 ## Technologies Used
 
@@ -42,7 +42,7 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 OPENAI_API_KEY=
 ```
 
-**Note: This project is still under development and actively seeking contributors! If you're interested in shaping the future of AI services, join us in making this project better.**
+**Note: This project is still under development and actively seeking contributors! If you're interested in shaping the future of AI Studio, join us in making this project better.**
 
 Explore the possibilities with AI Studio, where innovation meets intelligence!
 
