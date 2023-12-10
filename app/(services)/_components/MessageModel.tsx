@@ -23,14 +23,16 @@ const MessageModel = () => {
                                 minPolarAngle={Math.PI / 2 - 0.1}
                             />
                             <Message
-                            
-                                scale={1.2}
+                                scale={2}
                                 animationSpeed={0.5}
                                 position={[0, 0, 0]}
                             />
                         </Suspense>
                         <Preload all />
                     </Canvas>
+                    <h1 className=' text-center font-semibold text-2xl text-neutral-600 '>
+                        Start your Conversation!
+                    </h1>
                 </div>
             </div>
         </div>

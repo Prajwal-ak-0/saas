@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 interface HeadingProps {
   title: string;
   description: string;
-  Icon: React.ElementType;
+  Icon?: React.ElementType;
   iconColor?: string;
   bgColor?: string;
 }
@@ -19,7 +19,7 @@ export const Heading = ({
 }: HeadingProps) => {
   return (
     <>
-      <div className="px-4 lg:px-8 flex items-center gap-x-3 mb-8">
+      <div className="px-4 lg:px-8 flex items-center gap-x-3 mb-2">
         <div className={cn("p-2 w-fit rounded-md")}>
           {Icon && <Icon className={cn("w-10 h-10 font-extrabold", iconColor)} />}
         </div>

@@ -88,7 +88,6 @@ const ConversationPage = () => {
         <Heading
           title="Conversation"
           description="Our most advanced conversation model."
-          Icon={MessageSquare}
           iconColor="text-violet-500"
           bgColor="bg-violet-500/10"
         />
@@ -150,7 +149,6 @@ const ConversationPage = () => {
           </div>
         </div>
         <div className="mb-auto">
-          {/* Move Form to Bottom */}
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
@@ -166,7 +164,6 @@ const ConversationPage = () => {
             grid-cols-12
           "
             >
-              {/* Form Fields */}
               <FormField
                 name="prompt"
                 render={({ field }) => (
@@ -175,7 +172,7 @@ const ConversationPage = () => {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="How do I calculate the radius of a circle?"
+                        placeholder="Who is Virat Kohli? "
                         {...field}
                       />
                     </FormControl>
