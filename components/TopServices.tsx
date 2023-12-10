@@ -1,21 +1,25 @@
 import React from 'react'
 import ServiceCard from './ServiceCard'
+import { link } from 'fs'
 
 const services = [
     {
         title: 'Conversational Intelligence Hub',
         description: 'Empower your applications with our advanced Chat Bot Service. Unlock the potential of natural language processing, allowing your users to interact seamlessly. From answering queries to providing personalized recommendations, our chat bot service is the key to enhancing user engagement and satisfaction.',
-        image: '/images/chat.jpeg'
+        image: '/images/chat.jpeg',
+        link: '/chat'
     },
     {
         title: 'Imaginative Creations Studio',
         description: 'Welcome to a world of endless possibilities with our Image Generator Service. Transform ideas into visual reality by leveraging state-of-the-art algorithms. Whether you need stunning visuals for your projects or creative content for marketing, our Image Generator Service is your gateway to a visually compelling future.',
-        image: '/images/img.jpeg'
+        image: '/images/img.jpeg',
+        link: '/image'
     },
     {
         title: 'Visionary Text from Images Engine',
         description: 'Experience the magic of turning images into meaningful text with our Chat GPT Vision Service. Extract valuable insights, details, and information from images effortlessly. From analyzing scenes to extracting text, our service bridges the gap between visual content and actionable intelligence, providing a new dimension to your applications.',
-        image: '/images/img2.jpeg'
+        image: '/images/img2.jpeg',
+        link: '/vision'
     },
 ]
 
@@ -35,6 +39,7 @@ const TopServices = () => {
                         description={service.description}
                         image={service.image}
                         onClick={() => { }}
+                        link={service.link}
                     />
                     </div>
                 ))}

@@ -1,21 +1,28 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 import { Button } from './ui/button'
 import { MoveUpRight } from 'lucide-react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 interface ServiceCardProps {
     title: string
     description: string
     image: string
     onClick: () => void
+    link:string
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
     title,
     description,
     image,
-    onClick
+    onClick,
+    link
 }) => {
+
     return (
         <>
             <div className='max-md:hidden'>
@@ -63,10 +70,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                             {description}
                         </h1>
                         <div>
-                            <Button variant={"secondary"} className='flex mt-2'>
+                            <Link href={`${link}`}>
+                            <Button  variant={"secondary"} className='flex mt-2'>
                                 Try Now
                                 <MoveUpRight className='ml-2' size={16} />
                             </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
