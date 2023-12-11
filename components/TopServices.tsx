@@ -2,7 +2,7 @@ import React from 'react'
 import ServiceCard from './ServiceCard'
 import { MessageSquare, Eye, Image, FileText, FileAudio, Code } from 'lucide-react'
 
-const services = [
+export const services = [
     {
         title: 'Chat Bot Service',
         description: 'Empower your applications with our advanced Chat Bot Service. Unlock the potential of natural language processing, allowing your users to interact seamlessly.Our chat bot service is the key to enhancing user engagement and satisfaction.',
