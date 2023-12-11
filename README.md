@@ -50,6 +50,7 @@ Explore the possibilities with AI Studio, where innovation meets intelligence!
 
 If you have any questions, suggestions, or want to contribute, feel free to reach out!
 
+- **Live:** [saas](https://saas-gules-ten.vercel.app/)
 - **GitHub:** [Prajwal-ak-0](https://github.com/Prajwal-ak-0)
 - **LinkedIn:** [www.linkedin.com/in/prajwal-ak-802552191](https://www.linkedin.com/in/yourlinkedinprofile/)
 
