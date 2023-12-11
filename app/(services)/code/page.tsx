@@ -130,21 +130,21 @@ const CodePage = () => {
           </div>
         </div>
       </div>
-      <div className="fixed bottom-0 w-full">
+      <div className="mb-auto">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
             className="
-              rounded-lg 
-              border 
-              w-full 
-              p-4 
-              px-3 
-              md:px-6 
-              focus-within:shadow-sm
-              grid
-              grid-cols-12
-              gap-2
+            rounded-lg
+            mx-6
+            md:mb-[56px]
+            border
+            sm:mb-10
+            px-3
+            md:px-8
+            focus-within:shadow-sm
+            grid
+            grid-cols-12
             "
           >
             <FormField

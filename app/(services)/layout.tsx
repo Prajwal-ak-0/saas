@@ -19,7 +19,7 @@ const page = ({ children }: { children: React.ReactNode }) => {
         </div>
       </div>
 
-      <div className='lg:ml-[300px]'>
+      <div className='lg:ml-[300px] w-full'>
         {children}
       </div>
     </div>

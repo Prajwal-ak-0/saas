@@ -27,7 +27,7 @@ const Hero = () => {
                         </h1>
                     </div>
                 </div>
-                <div className='w-[60%] '>
+                <div className='w-[60%] mt-12'>
                     <Canvas >
                         <Suspense >
                             <spotLight
