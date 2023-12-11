@@ -11,7 +11,6 @@ import { cn } from '@/lib/utils'
 interface ServiceCardProps {
     title: string
     description: string
-    image: string
     onClick: () => void
     link: string
     icon?: React.ElementType
@@ -20,7 +19,6 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({
     title,
     description,
-    image,
     onClick,
     link,
     icon: Icon
