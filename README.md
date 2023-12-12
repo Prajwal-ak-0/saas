@@ -2,6 +2,11 @@
 
 Welcome to the AI Studio Hub, your go-to platform for a diverse range of artificial intelligence services. Our web application offers a multitude of functionalities, harnessing the power of cutting-edge AI models to cater to your specific needs. From natural language processing with ChatGPT to creative content generation with image, code, audio, and video services, our platform is designed to provide an all-encompassing AI experience.
 
+![Home Page](public/images/github_imag1.png)
+![Features](public/images/github_image2.png)
+![Services](public/images/github_image3.png)
+
+
 ## Technologies Used
 
 🚀🎨🤖🔗🌐
