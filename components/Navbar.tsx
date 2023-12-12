@@ -4,12 +4,20 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import Usermenu from "./Usermenu";
 import Logo from "./Logo";
+import Search from "./Search";
+import { SearchIcon } from "lucide-react";
 
-const Navbar = () => {
+interface NavbarProps {
+    isExplore?: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+    isExplore = false
+}) => {
     return (
         <div className="flex w-full sm:h-24 h-16 sm:shadow-lg shadow-sm fixed z-10 bg-white justify-between">
             <div className="max-sm:hidden">
-                <Logo/>
+                <Logo />
             </div>
             <div className="sm:hidden">
                 <Image
@@ -21,9 +29,27 @@ const Navbar = () => {
                 />
             </div>
             <div className="flex max-sm:hidden  gap-6 my-auto mr-8">
-                <Button variant={"secondary"}>
-                    Explore
-                </Button>
+                {
+                    !isExplore ? (
+                        <>
+                            <Button variant={"secondary"}>
+                                Explore
+                            </Button>
+                        </>
+                    ) : (
+                        <>
+                            <div className="relative md:mx-auto">
+                                <SearchIcon className="absolute top-0 left-0 ml-3 mt-3 text-gray-500" />
+                                <input
+                                    type="text"
+                                    className="pl-10 pr-4 lg:mr-40 py-2 rounded-lg shadow focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                                    style={{ width: '300px' }}
+                                    placeholder="Search..."
+                                />
+                            </div>
+                        </>
+                    )
+                }
                 {/* <Button variant={"primary"}>
                     SignUp
                 </Button> */}
