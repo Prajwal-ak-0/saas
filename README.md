@@ -2,6 +2,11 @@
 
 Welcome to the AI Studio Hub, your go-to platform for a diverse range of artificial intelligence services. Our web application offers a multitude of functionalities, harnessing the power of cutting-edge AI models to cater to your specific needs. From natural language processing with ChatGPT to creative content generation with image, code, audio, and video services, our platform is designed to provide an all-encompassing AI experience.
 
+![Home Page](public/images/github_imag1.png)
+![Features](public/images/github_image2.png)
+![Services](public/images/github_image3.png)
+
+
 ## Technologies Used
 
 🚀🎨🤖🔗🌐
@@ -50,7 +55,6 @@ Explore the possibilities with AI Studio, where innovation meets intelligence!
 
 If you have any questions, suggestions, or want to contribute, feel free to reach out!
 
-- **Live:** [saas](https://saas-gules-ten.vercel.app/)
 - **GitHub:** [Prajwal-ak-0](https://github.com/Prajwal-ak-0)
 - **LinkedIn:** [www.linkedin.com/in/prajwal-ak-802552191](https://www.linkedin.com/in/yourlinkedinprofile/)
 
