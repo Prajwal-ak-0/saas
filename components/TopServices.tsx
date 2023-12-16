@@ -1,6 +1,6 @@
 import React from 'react'
 import ServiceCard from './ServiceCard'
-import { MessageSquare, Eye, Image, FileText, FileAudio, Code, Video, Music } from 'lucide-react'
+import { MessageSquare, Eye, Image, FileText, FileAudio, Code, Video, Music, LanguagesIcon } from 'lucide-react'
 import { title } from 'process'
 import { link } from 'fs'
 
@@ -18,10 +18,10 @@ export const services = [
         icon: Image
     },
     {
-        title: 'Vision Service',
-        description: 'Experience the magic of turning images into meaningful text with our GPT Vision Service. Extract valuable insights, and information from images effortlessly. From analyzing scenes to extracting text, providing a new dimension to your applications.',
-        link: '/vision',
-        icon: Eye
+        title: 'Language Translator',
+        description: 'Our Language Translator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From translating documents to extracting keywords, our service does it all.',
+        link: '/language',
+        icon: LanguagesIcon
     },
     {
         title: ' Pdf Summarizer',
@@ -42,40 +42,40 @@ export const services = [
         icon: FileAudio
     },
     {
-        title : 'Audio to Text Generator', 
-        description : 'Our Audio to Text Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
-        link : '/audiotoaudio',
-        icon : FileText
+        title: 'Audio to Text Generator',
+        description: 'Our Audio to Text Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
+        link: '/audiotoaudio',
+        icon: FileText
     },
     {
-        title : 'Video Generator',
-        description : 'Our Video Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
-        link:'/video',
-        icon : Video
+        title: 'Video Generator',
+        description: 'Our Video Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
+        link: '/video',
+        icon: Video
     },
     {
-        title : 'Music Generator',
-        description : 'Our Music Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
-        link:'/music',
-        icon:Music
+        title: 'Music Generator',
+        description: 'Our Music Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
+        link: '/music',
+        icon: Music
     },
     {
-        title : '3D Costume Designer',
-        description : 'Our 3D Costume Designer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
-        link:'/3d',
-        icon:Image
+        title: '3D Costume Designer',
+        description: 'Our 3D Costume Designer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
+        link: '/3d',
+        icon: Image
     },
     {
-        title : 'Email Writer',
-        description : 'Our Email Writer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
-        link:'/email',
-        icon:MessageSquare
+        title: 'Email Writer',
+        description: 'Our Email Writer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
+        link: '/email',
+        icon: MessageSquare
     },
     {
-        title : 'Resume Writer',
-        description : 'Our Resume Writer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
-        link:'/resume',
-        icon:FileText
+        title: 'Resume Writer',
+        description: 'Our Resume Writer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
+        link: '/resume',
+        icon: FileText
     }
 ]
 
@@ -93,10 +93,10 @@ export const topservices = [
         icon: Image
     },
     {
-        title: 'Vision Service',
-        description: 'Experience the magic of turning images into meaningful text with our GPT Vision Service. Extract valuable insights, and information from images effortlessly. From analyzing scenes to extracting text, providing a new dimension to your applications.',
-        link: '/vision',
-        icon: Eye
+        title: 'Language Translator',
+        description: 'Our Language Translator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From translating documents to extracting keywords, our service does it all.',
+        link: '/language',
+        icon: LanguagesIcon
     },
     {
         title: ' Pdf Summarizer',
