@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({
     isExplore = false
 }) => {
     return (
-        <div className="flex w-full sm:h-24 h-16 sm:shadow-lg shadow-sm fixed z-10 light:bg-white  justify-between">
+        <div className="flex w-full sm:h-24 h-16 sm:shadow-lg shadow-sm light:fixed z-10 light:bg-white  justify-between">
             <div className="dark:hidden max-sm:hidden">
                 <Logo />
             </div>

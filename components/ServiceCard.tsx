@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     return (
         <>
             <div className='max-md:hidden'>
-                <div className=' bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200'>
+                <div className=' bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
                     <div className=''>
                         <div className="flex gap-2">
                             <div className={cn("py-2 w-fit rounded-md")}>
@@ -54,7 +54,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 </div>
             </div>
 
-            <div className='md:hidden mx-12 max-sm:hidden bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 px-6 py-2 rounded-lg bg-neutral-200'>
+            <div className='md:hidden mx-12 max-sm:hidden bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 px-6 py-2 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
                 <div className='flex flex-row gap-4'>
                     <div className='mt-4'>
                         <div className="flex gap-2">
@@ -80,7 +80,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 </div>
             </div>
 
-            <div className='sm:hidden bg-opacity-50 mx-2 backdrop-filter backdrop-blur-md border border-gray-300 px-4 py-2 rounded-lg bg-neutral-200'>
+            <div className='sm:hidden bg-opacity-50 mx-2 backdrop-filter backdrop-blur-md border border-gray-300 px-4 py-2 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
                 <div className='flex flex-row gap-4'>
                     <div className=''>
                         <div className="flex gap-2">
