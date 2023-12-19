@@ -15,28 +15,28 @@ const Footer = () => {
 
   const isSmallDevice = window.innerWidth <= 768;
 
-  const [isPrivacyPolicyOpen, setPrivacyPolicyOpen] = useState(false);
-  const [isTermsAndConditionsOpen, setTermsAndConditionsOpen] = useState(false);
+  // const [isPrivacyPolicyOpen, setPrivacyPolicyOpen] = useState(false);
+  // const [isTermsAndConditionsOpen, setTermsAndConditionsOpen] = useState(false);
 
   const toggleSubscribe = () => {
     setIsSubscribed(!isSubscribed);
   }
 
-  const handlePrivacyPolicyClick = () => {
-    setPrivacyPolicyOpen(true);
-  };
+  // const handlePrivacyPolicyClick = () => {
+  //   setPrivacyPolicyOpen(true);
+  // };
 
-  const handleTermsAndConditionsClick = () => {
-    setTermsAndConditionsOpen(true);
-  };
+  // const handleTermsAndConditionsClick = () => {
+  //   setTermsAndConditionsOpen(true);
+  // };
 
-  const handlePrivacyPolicyClose = () => {
-    setPrivacyPolicyOpen(false);
-  };
+  // const handlePrivacyPolicyClose = () => {
+  //   setPrivacyPolicyOpen(false);
+  // };
 
-  const handleTermsAndConditionsClose = () => {
-    setTermsAndConditionsOpen(false);
-  };
+  // const handleTermsAndConditionsClose = () => {
+  //   setTermsAndConditionsOpen(false);
+  // };
 
   return (
     <div className='h-[70vh] w-full '>
@@ -93,7 +93,7 @@ const Footer = () => {
 
           <div className="flex md:pl-32 md:flex-row flex-col justify-around items-center  text-black p-4 sm:mt-10 mt-6">
             <div>
-              <h1 onClick={handlePrivacyPolicyClick} className='font-mono md:text-md sm:text-lg my-auto hover:cursor-pointer hover:shadow-neutral-300'>
+              <h1 className='font-mono md:text-md sm:text-lg my-auto hover:cursor-pointer hover:shadow-neutral-300'>
                 Privacy Policy
               </h1>
             </div>
@@ -103,7 +103,7 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <h1 onClick={handleTermsAndConditionsClick} className='font-mono md:text-md sm:text-lg my-auto hover:cursor-pointer hover:shadow-neutral-300'>
+              <h1 className='font-mono md:text-md sm:text-lg my-auto hover:cursor-pointer hover:shadow-neutral-300'>
                 Terms & Conditions
               </h1>
             </div>

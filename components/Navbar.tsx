@@ -6,6 +6,7 @@ import Usermenu from "./Usermenu";
 import Logo from "./Logo";
 import Search from "./Search";
 import { SearchIcon } from "lucide-react";
+import { ModeToggle } from "./ModeToggle";
 
 interface NavbarProps {
     isExplore?: boolean;
@@ -32,6 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 {
                     !isExplore ? (
                         <>
+                            <ModeToggle/>
                             <Button variant={"secondary"}>
                                 Explore
                             </Button>

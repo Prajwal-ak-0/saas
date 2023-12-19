@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: [
+      remotePatterns: [
         "googleusercontent.com",
         "oaidalleapiprodscus.blob.core.windows.net",
         "cdn.openai.com"

@@ -58,14 +58,37 @@ const MusicPage = () => {
 
     return (
         <div>
-            <Heading
-                title="Music Generation"
-                description="Turn your prompt into music."
-                Icon={Music}
-                iconColor="text-emerald-500"
-                bgColor="bg-emerald-500/10"
-            />
+            <div className="sm:pt-4 pt-2">
+
+                <Heading
+                    title="Music Generation"
+                    description="Turn your prompt into music."
+                    Icon={Music}
+                    iconColor="text-emerald-500"
+                    bgColor="bg-emerald-500/10"
+                />
+            </div>
+
             <div className="px-4 lg:px-8">
+
+                {isLoading && (
+                    <div className="p-20">
+                        <Loader />
+                    </div>
+                )}
+                {!music && !isLoading && (
+                    <div className="flex flex-col gap-y-4 h-[calc(75vh-200px)] overflow-y-auto">
+                        <h1>No Music Generated</h1>
+                    </div>
+                )}
+                {music && (
+                    <audio controls className="w-full flex flex-col gap-y-4 h-[calc(94vh-200px)] sm:h-[calc(100vh-200px)] overflow-y-auto">
+                        <source src={music} />
+                    </audio>
+                )}
+            </div>
+
+            <div className="mb-auto">
                 <Form {...form}>
                     <form
                         onSubmit={form.handleSubmit(onSubmit)}
@@ -102,20 +125,6 @@ const MusicPage = () => {
                         </Button>
                     </form>
                 </Form>
-                {isLoading && (
-                    <div className="p-20">
-                        <Loader />
-                    </div>
-                )}
-                {!music && !isLoading && (
-                    <h1>                    No music generated.
-                    </h1>
-                )}
-                {music && (
-                    <audio controls className="w-full mt-8">
-                        <source src={music} />
-                    </audio>
-                )}
             </div>
         </div>
     );
