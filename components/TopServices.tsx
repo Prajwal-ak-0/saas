@@ -19,7 +19,7 @@ export const services = [
     },
     {
         title: 'Language Translator',
-        description: 'Our Language Translator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From translating documents to extracting keywords, our service does it all.',
+        description: 'Our Language Translator Service is the key to unlocking the power of natural language processing. Extract the most important information from your document, and save time. From translating document to extracting keywords, our service does all.',
         link: '/language',
         icon: LanguagesIcon
     },
@@ -37,7 +37,7 @@ export const services = [
     },
     {
         title: 'Text to Audio Generator',
-        description: 'Our Text to Audio Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
+        description: 'Our Text to Audio Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your document, and save time. From summarizing document to extracting keywords, our service does  all.',
         link: '/texttoaudio',
         icon: FileAudio
     },

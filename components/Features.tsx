@@ -13,7 +13,7 @@ const Features = () => {
         <h1 className='text-5xl font-bold pl-16 '>
           Feature&apos;s Highlights :
         </h1>
-        <div className='w-1/3 items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200'>
+        <div className='w-1/3 items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
           <h1>
             <span className='font-semibold'>
               1. AI at Your Fingertips :<br />
@@ -23,7 +23,7 @@ const Features = () => {
         </div>
 
         <div className='flex w-full px-8'>
-          <div className='w-[30%] my-auto items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200'>
+          <div className='w-[30%] my-auto items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
             <h1>
               <span className='font-semibold'>
                 2. Innovate with Confidence:<br />
@@ -57,7 +57,7 @@ const Features = () => {
               </Canvas>
             </div>
           </div>
-          <div className='my-auto w-[30%] items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200'>
+          <div className='my-auto w-[30%] items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
             <h1>
               <span className='font-semibold'>
                 3.  Stay Ahead, Stay Informed:<br />
@@ -99,7 +99,7 @@ const Features = () => {
         </div>
 
         <div className='sm:h-[420px] h-[380px]'>
-          <div className='w-[330px] sm:w-[530px] items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200'>
+          <div className='w-[330px] sm:w-[530px] items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200 dark:bg-[#080a35]'>
             <h1 className='text-[14px] sm:text-[18px]'>
               <span className='font-semibold text-[16px] sm:text-[20px]'>
                 1. AI at Your Fingertips :<br />
@@ -108,7 +108,7 @@ const Features = () => {
             </h1>
           </div>
 
-          <div className='w-[330px] sm:w-[530px] items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200'>
+          <div className='w-[330px] sm:w-[530px] items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200 dark:bg-[#080a35]'>
             <h1 className='text-[14px] sm:text-[18px]'>
               <span className='font-semibold text-[16px] sm:text-[20px]'>
                 2. Innovate with Confidence:<br />
@@ -117,7 +117,7 @@ const Features = () => {
             </h1>
           </div>
 
-          <div className='w-[330px] sm:w-[530px] items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200'>
+          <div className='w-[330px] sm:w-[530px] items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-sm bg-neutral-200 dark:bg-[#080a35]'>
             <h1 className='text-[14px] sm:text-[18px]'>
               <span className='font-semibold text-[16px] sm:text-[20px]'>
                 3.  Stay Ahead, Stay Informed:<br />
