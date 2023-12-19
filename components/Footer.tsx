@@ -42,9 +42,18 @@ const Footer = () => {
     <div className='h-[70vh] w-full '>
       <Separator className='shadow-2xl mx-4 h-[2px]' />
       <div className="flex flex-col">
-        <div className="flex items-center justify-center">
+        <div className="flex dark:hidden items-center justify-center">
           <Image
             src="/images/logo.png"
+            alt="logo"
+            className="px-2 my-auto"
+            width={250}
+            height={250}
+          />
+        </div>
+        <div className="flex light:hidden items-center justify-center">
+          <Image
+            src="/images/logo2.png"
             alt="logo"
             className="px-2 my-auto"
             width={250}
