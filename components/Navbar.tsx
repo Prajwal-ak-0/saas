@@ -16,9 +16,20 @@ const Navbar: React.FC<NavbarProps> = ({
     isExplore = false
 }) => {
     return (
-        <div className="flex w-full sm:h-24 h-16 sm:shadow-lg shadow-sm fixed z-10 bg-white justify-between">
-            <div className="max-sm:hidden">
+        <div className="flex w-full sm:h-24 h-16 sm:shadow-lg shadow-sm fixed z-10 light:bg-white  justify-between">
+            <div className="dark:hidden max-sm:hidden">
                 <Logo />
+            </div>
+            <div className="dark:block hidden max-sm:hidden">
+                <div>
+                    <Image
+                        src="/images/logo2.png"
+                        alt="logo"
+                        className="px-2 my-auto"
+                        width={250}
+                        height={250}
+                    />
+                </div>
             </div>
             <div className="sm:hidden">
                 <Image
@@ -33,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 {
                     !isExplore ? (
                         <>
-                            <ModeToggle/>
+                            <ModeToggle />
                             <Button variant={"secondary"}>
                                 Explore
                             </Button>
