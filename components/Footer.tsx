@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="sm:w-3/4 w-[95%] sm:h-40 h-28 bg-gradient-to-tr from-[#001f47] to-[#010a16] mx-auto rounded-lg shadow-lg shadow-neutral-600 hover:shadow-xl hover:shadow-neutral-700">
           <div className="flex justify-around sm:my-16 my-10">
-            <h1 className='text-white font-mono md:text-4xl sm:text-2xl my-auto'>
+            <h1 className='dark:text-black light:text-white font-mono md:text-4xl sm:text-2xl my-auto'>
               Subscribe Newsletter
             </h1>
             <div>
@@ -86,21 +86,21 @@ const Footer = () => {
 
         <div className="w-full px-16 md:px-32 sm:mt-10 mt-6">
           <div className="flex max-sm:flex-col mx-auto  justify-around gap-2 items-center">
-            <h1 className='text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
+            <h1 className='dark:text-white light:text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
               Home
             </h1>
-            <h1 className='text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
+            <h1 className='dark:text-white light:text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
               About
             </h1>
-            <h1 className='text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
+            <h1 className='dark:text-white light:text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
               Contact
             </h1>
-            <h1 className='text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
+            <h1 className='dark:text-white light:text-black md:text-2xl sm:text-lg my-auto font-medium text-lg hover:cursor-pointer hover:shadow-neutral-300' >
               Services
             </h1>
           </div>
 
-          <div className="flex md:pl-32 md:flex-row flex-col justify-around items-center  text-black p-4 sm:mt-10 mt-6">
+          <div className="flex md:pl-32 md:flex-row flex-col justify-around items-center  dark:text-white light:text-black p-4 sm:mt-10 mt-6">
             <div>
               <h1 className='font-mono md:text-md sm:text-lg my-auto hover:cursor-pointer hover:shadow-neutral-300'>
                 Privacy Policy
@@ -117,7 +117,7 @@ const Footer = () => {
               </h1>
             </div>
             <div>
-              <p className='md:hidden font-mono mt-12 md:text-2xl sm:text-lg my-auto'>
+              <p className='md:hidden dark:text-black light:text-white font-mono mt-12 md:text-2xl sm:text-lg my-auto'>
                 &copy; {new Date().getFullYear()} AI Studio
               </p>
             </div>

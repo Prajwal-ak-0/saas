@@ -12,7 +12,7 @@ export const services = [
         icon: MessageSquare
     },
     {
-        title: 'Image Generator Engine',
+        title: 'Image Generator',
         description: 'Welcome to a world of endless possibilities with our Image Generator Service. Transform ideas into visual reality by leveraging state-of-the-art algorithms. Whether you need stunning visuals for your projects or creative content for marketing.',
         link: '/image',
         icon: Image
@@ -36,13 +36,13 @@ export const services = [
         icon: Code
     },
     {
-        title: 'Text to Audio Generator',
+        title: 'Text ➡️ Audio',
         description: 'Our Text to Audio Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your document, and save time. From summarizing document to extracting keywords, our service does  all.',
         link: '/texttoaudio',
         icon: FileAudio
     },
     {
-        title: 'Audio to Text Generator',
+        title: 'Audio ➡️ Text',
         description: 'Our Audio to Text Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
         link: '/audiotoaudio',
         icon: FileText
@@ -60,7 +60,7 @@ export const services = [
         icon: Music
     },
     {
-        title: '3D Costume Designer',
+        title: '3D Costume Design',
         description: 'Our 3D Costume Designer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
         link: '/3d',
         icon: Image
@@ -81,13 +81,13 @@ export const services = [
 
 export const topservices = [
     {
-        title: 'Chat Bot Service',
+        title: 'Chat Bot',
         description: 'Empower your applications with our advanced Chat Bot Service. Unlock the potential of natural language processing, allowing your users to interact seamlessly.Our chat bot service is the key to enhancing user engagement and satisfaction.',
         link: '/chat',
         icon: MessageSquare
     },
     {
-        title: 'Image Generator Engine',
+        title: 'Image Generator',
         description: 'Welcome to a world of endless possibilities with our Image Generator Service. Transform ideas into visual reality by leveraging state-of-the-art algorithms. Whether you need stunning visuals for your projects or creative content for marketing.',
         link: '/image',
         icon: Image
@@ -99,7 +99,7 @@ export const topservices = [
         icon: LanguagesIcon
     },
     {
-        title: ' Pdf Summarizer',
+        title: 'Pdf Summarizer',
         description: 'Our Pdf Summarizer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
         link: '/pdf',
         icon: FileText
@@ -111,7 +111,7 @@ export const topservices = [
         icon: Code
     },
     {
-        title: 'Text to Audio Generator',
+        title: 'Text ➡️ Audio',
         description: 'Our Text to Audio Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your document, and save time. From summarizing document to extracting keywords, our service does all.',
         link: '/audio',
         icon: FileAudio
