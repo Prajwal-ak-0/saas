@@ -57,22 +57,42 @@ const VideoPage = () => {
 
     return (
         <div>
-            <Heading
-                title="Video Generation"
-                description="Turn your prompt into video."
-                Icon={FileAudio}
-                iconColor="text-orange-700"
-                bgColor="bg-orange-700/10"
-            />
+            <div className="sm:pt-4 pt-2">
+
+                <Heading
+                    title="Video Generation"
+                    description="Turn your prompt into video."
+                    Icon={FileAudio}
+                    iconColor="text-orange-700"
+                    bgColor="bg-orange-700/10"
+                />
+            </div>
             <div className="px-4 lg:px-8">
+                {isLoading && (
+                    <div className="p-20 sm:pb-[290px]">
+                        <Loader />
+                    </div>
+                )}
+                {!video && !isLoading && (
+                    <div className="flex flex-col gap-y-4 h-[calc(95vh-200px)] overflow-y-auto">
+                    <h1>No Video Generated</h1>
+                </div>
+                )}
+                {video && (
+                    <video controls className="w-full flex flex-col gap-y-4 h-[calc(95vh-200px)] sm:h-[calc(100vh-200px)] overflow-y-auto">
+                        <source src={video} />
+                    </video>
+                )}
+            </div>
+            <div className="mb-auto">
                 <Form {...form}>
                     <form
                         onSubmit={form.handleSubmit(onSubmit)}
                         className="
               rounded-lg 
               border 
-              w-full 
               p-4 
+              mx-3
               px-3 
               md:px-6 
               focus-within:shadow-sm
@@ -101,19 +121,6 @@ const VideoPage = () => {
                         </Button>
                     </form>
                 </Form>
-                {isLoading && (
-                    <div className="p-20">
-                        <Loader />
-                    </div>
-                )}
-                {!video && !isLoading && (
-                    <h1>No video files generated.</h1>
-                )}
-                {video && (
-                    <video controls className="w-full aspect-video mt-8 rounded-lg border bg-black">
-                        <source src={video} />
-                    </video>
-                )}
             </div>
         </div>
     );

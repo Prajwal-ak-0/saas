@@ -72,17 +72,17 @@ const MusicPage = () => {
             <div className="px-4 lg:px-8">
 
                 {isLoading && (
-                    <div className="p-20">
+                    <div className="p-20 sm:pb-[290px]">
                         <Loader />
                     </div>
                 )}
                 {!music && !isLoading && (
-                    <div className="flex flex-col gap-y-4 h-[calc(75vh-200px)] overflow-y-auto">
+                    <div className="flex flex-col gap-y-4 h-[calc(95vh-200px)] overflow-y-auto">
                         <h1>No Music Generated</h1>
                     </div>
                 )}
                 {music && (
-                    <audio controls className="w-full flex flex-col gap-y-4 h-[calc(94vh-200px)] sm:h-[calc(100vh-200px)] overflow-y-auto">
+                    <audio controls className="w-full flex flex-col gap-y-4 h-[calc(95vh-200px)] sm:h-[calc(100vh-200px)] overflow-y-auto">
                         <source src={music} />
                     </audio>
                 )}
@@ -94,9 +94,9 @@ const MusicPage = () => {
                         onSubmit={form.handleSubmit(onSubmit)}
                         className="
               rounded-lg 
-              border 
-              w-full 
+              border  
               p-4 
+              mx-6
               px-3 
               md:px-6 
               focus-within:shadow-sm
