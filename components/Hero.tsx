@@ -6,6 +6,7 @@ import { OrbitControls, Preload } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React, { Suspense } from 'react'
 import Features from './Features'
+import Loader from './Loader'
 
 const Hero = () => {
     return (
@@ -29,7 +30,7 @@ const Hero = () => {
                 </div>
                 <div className='w-[60%] mt-12'>
                     <Canvas >
-                        <Suspense >
+                        <Suspense fallback={<Loader/>} >
                             <spotLight
                                 position={[10, 10, 10]}
                                 angle={0.15}
@@ -68,7 +69,7 @@ const Hero = () => {
 
                 <div className='w-full h-[300px] sm:h-[400px] -mt-12 mx-auto'>
                     <Canvas >
-                        <Suspense >
+                        <Suspense fallback={<Loader/>} >
                             <spotLight
                                 position={[10, 10, 10]}
                                 angle={0.15}

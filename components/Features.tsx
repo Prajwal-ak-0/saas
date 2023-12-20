@@ -4,6 +4,7 @@ import { Brain } from '@/models/Brain';
 import { OrbitControls, Preload } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react'
+import Loader from './Loader';
 
 const Features = () => {
   return (
@@ -34,7 +35,7 @@ const Features = () => {
           <div className='w-[40%]' >
             <div className='h-[500px] items-center justify-center'>
               <Canvas >
-                <Suspense >
+                <Suspense fallback={<Loader/>} >
                   <spotLight
                     position={[10, 10, 10]}
                     angle={0.15}
@@ -75,7 +76,7 @@ const Features = () => {
 
         <div className='h-[260px] sm:h-[350px]'>
           <Canvas >
-            <Suspense >
+            <Suspense fallback={<Loader/>} >
               <spotLight
                 position={[10, 10, 10]}
                 angle={0.15}
