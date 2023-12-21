@@ -11,7 +11,7 @@ import Loader from './Loader'
 const Hero = () => {
     return (
         <div className='w-screen'>
-            <div className='lg:flex hidden pt-28'>
+            <div className='lg:flex hidden pt-6'>
                 <div className='w-[40%] mt-24 pl-16'>
                     <div>
                         <h1 className='font-bold lg:text-6xl md:text-4xl w-fit'>
