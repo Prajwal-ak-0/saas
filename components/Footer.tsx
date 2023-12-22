@@ -51,7 +51,7 @@ const Footer = () => {
             height={250}
           />
         </div>
-        <div className="flex light:hidden items-center justify-center">
+        <div className=" dark:flex hidden  items-center justify-center">
           <Image
             src="/images/logo2.png"
             alt="logo"
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="sm:w-3/4 w-[95%] sm:h-40 h-28 bg-gradient-to-tr from-[#001f47] to-[#010a16] mx-auto rounded-lg shadow-lg shadow-neutral-600 hover:shadow-xl hover:shadow-neutral-700">
           <div className="flex justify-around sm:my-16 my-10">
-            <h1 className='dark:text-black light:text-white font-mono md:text-4xl sm:text-2xl my-auto'>
+            <h1 className=' text-white font-mono md:text-4xl sm:text-2xl my-auto'>
               Subscribe Newsletter
             </h1>
             <div>

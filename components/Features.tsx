@@ -5,11 +5,12 @@ import { OrbitControls, Preload } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react'
 import Loader from './Loader';
+import Image from 'next/image';
 
 const Features = () => {
   return (
     <>
-    {/* LARGE DEVEICES */}
+      {/* LARGE DEVEICES */}
       <div className='max-lg:hidden mt-16'>
         <h1 className='text-5xl font-bold pl-16 '>
           Feature&apos;s Highlights :
@@ -34,28 +35,12 @@ const Features = () => {
           </div>
           <div className='w-[40%]' >
             <div className='h-[500px] items-center justify-center'>
-              <Canvas >
-                <Suspense fallback={<Loader/>} >
-                  <spotLight
-                    position={[10, 10, 10]}
-                    angle={0.15}
-                    penumbra={1}
-                    intensity={1}
-                    castShadow
-                  />
-                  <OrbitControls
-                    enableZoom={false}
-                    maxPolarAngle={Math.PI / 2 - 0.1}
-                    minPolarAngle={Math.PI / 2 - 0.1}
-                  />
-                  <Brain
-                    scale={1.2}
-                    animationSpeed={0.5}
-                    position={[0, -2.5, 0]}
-                  />
-                </Suspense>
-                <Preload all />
-              </Canvas>
+              <Image
+                src={'/images/brain.png'}
+                alt='brain'
+                width={500}
+                height={500}
+              />
             </div>
           </div>
           <div className='my-auto w-[30%] items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
@@ -68,35 +53,19 @@ const Features = () => {
           </div>
         </div>
       </div>
-    {/* MEDIUM DEVICES */}
+      {/* MEDIUM DEVICES */}
       <div className='lg:hidden '>
         <h1 className='sm:text-4xl text-xl ml-4  font-bold pl-4 mt-8'>
           Feature&apos;s Highlights :
         </h1>
 
         <div className='h-[260px] sm:h-[350px]'>
-          <Canvas >
-            <Suspense fallback={<Loader/>} >
-              <spotLight
-                position={[10, 10, 10]}
-                angle={0.15}
-                penumbra={1}
-                intensity={1}
-                castShadow
-              />
-              <OrbitControls
-                enableZoom={false}
-                maxPolarAngle={Math.PI / 2 - 0.1}
-                minPolarAngle={Math.PI / 2 - 0.1}
-              />
-              <Brain
-                scale={1.3}
-                animationSpeed={0.5}
-                position={[0, -2.8, 0]}
-              />
-            </Suspense>
-            <Preload all />
-          </Canvas>
+          <Image
+            src={'/images/brain.png'}
+            alt='brain'
+            width={500}
+            height={500}
+          />
         </div>
 
         <div className='sm:h-[420px] h-[380px]'>
