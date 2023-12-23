@@ -15,28 +15,10 @@ const Footer = () => {
 
   const isSmallDevice = window.innerWidth <= 768;
 
-  // const [isPrivacyPolicyOpen, setPrivacyPolicyOpen] = useState(false);
-  // const [isTermsAndConditionsOpen, setTermsAndConditionsOpen] = useState(false);
 
   const toggleSubscribe = () => {
     setIsSubscribed(!isSubscribed);
   }
-
-  // const handlePrivacyPolicyClick = () => {
-  //   setPrivacyPolicyOpen(true);
-  // };
-
-  // const handleTermsAndConditionsClick = () => {
-  //   setTermsAndConditionsOpen(true);
-  // };
-
-  // const handlePrivacyPolicyClose = () => {
-  //   setPrivacyPolicyOpen(false);
-  // };
-
-  // const handleTermsAndConditionsClose = () => {
-  //   setTermsAndConditionsOpen(false);
-  // };
 
   return (
     <div className='h-[70vh] w-full '>
