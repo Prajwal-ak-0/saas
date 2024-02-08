@@ -84,7 +84,7 @@ const ConversationPage = () => {
 
   return (
     <div className="h-full">
-      <div className="pt-8 mb-12">
+      <div className="pt-8 mb-8">
         <Heading
           title="Conversation"
           description="Our most advanced conversation model."
@@ -105,7 +105,7 @@ const ConversationPage = () => {
             {messages.length === 0 && !isLoading ? (
               <>
                 <MessageModel />
-                <div className="flex flex-col  gap-y-4 h-[calc(75vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
+                <div className="flex flex-col  gap-y-4 h-[calc(72vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
                   {messages.map((message, index) => (
                     <div
                       key={index}
@@ -132,7 +132,7 @@ const ConversationPage = () => {
                       ref={index === messages.length - 1 ? lastMessageRef : null}
                       className={cn(
                         "p-4 w-full flex items-start gap-x-4 rounded-lg",
-                        message.role === "user" ? "bg-emerald-50 border dark:bg-[#080a35] border-black/10" : "bg-[#390b49] ",
+                        message.role === "user" ? "bg-emerald-50 border dark:bg-[#080a35] border-black/10" : "dark:bg-[#390b49] bg-purple-100",
                       )}
                     >
                       {message.role === "user" ? <UserAvatar /> : <BotAvatar />}

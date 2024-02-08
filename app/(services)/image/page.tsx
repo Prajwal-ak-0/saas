@@ -20,6 +20,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Heading } from "../_components/Heading";
 import { Loader } from "../_components/Loader";
 import { amountOptions, resolutionOptions } from "../constants";
+import MessageModel from "../_components/MessageModel";
 
 
 const formSchema = z.object({
@@ -68,7 +69,7 @@ const PhotoPage = () => {
 
   return (
     <div>
-      <div className="sm:pt-4 pt-2">
+      <div className="sm:pt-8  pt-2">
         <Heading
           title="Image Generation"
           description="Turn your prompt into an image."
@@ -85,11 +86,11 @@ const PhotoPage = () => {
           </div>
         )}
         {photos.length === 0 && !isLoading && (
-          <div className="h-[calc(62vh-200px)] sm:h-[calc(80vh-200px)]  lg:h-[calc(95vh-200px)]">
-            <h1>No Image Generated</h1>
+          <div className="h-[calc(80vh-200px)] sm:h-[calc(80vh-200px)]  lg:h-[calc(95vh-200px)]">
+            <MessageModel />
           </div>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
+        <div className="h-[calc(80vh-200px)] sm:h-[calc(80vh-200px)]  lg:h-[calc(95vh-200px)] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
           {photos.map((src) => (
             <Card key={src} className="rounded-lg overflow-hidden">
               <div className="relative aspect-square">
@@ -108,7 +109,7 @@ const PhotoPage = () => {
             </Card>
           ))}
         </div>
-        <div className="mb-auto " >
+        <div className="mb-auto p-4" >
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
@@ -116,7 +117,8 @@ const PhotoPage = () => {
               rounded-lg 
               border 
               w-full 
-              p-1
+              p-4 
+              mb-4
               sm:p-4 
               px-3 
               md:px-6 
@@ -202,7 +204,7 @@ const PhotoPage = () => {
                     </FormItem>
                   )}
                 />
-              <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button className="col-span-12 lg:col-span-2 p-2 w-full" type="submit" disabled={isLoading} size="icon">
                 Generate
               </Button>
             </form>

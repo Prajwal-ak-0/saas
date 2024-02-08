@@ -19,6 +19,7 @@ import { UserAvatar } from "../_components/UserAvatar";
 import { BotAvatar } from "../_components/BotAvatar";
 import { ChatCompletionRequestMessage } from "openai";
 import { cn } from "@/lib/utils";
+import MessageModel from "../_components/MessageModel";
 
 const formSchema = z.object({
   prompt: z.string().min(1, {
@@ -83,7 +84,7 @@ const CodePage = () => {
 
   return (
     <div className="flex flex-col h-screen relative">
-      <div className="flex-grow mt-4">
+      <div className="flex-grow sm:pt-4 mt-8 mb-8">
         <Heading
           title="Code Generation"
           description="Generate code using descriptive text."
@@ -99,7 +100,7 @@ const CodePage = () => {
               </div>
             )}
             {messages.length === 0 && !isLoading && (
-              <h1>No conversation started.</h1>
+              <MessageModel />
             )}
             <div className="flex flex-col">
               {messages.map((message, index) => (
@@ -107,8 +108,8 @@ const CodePage = () => {
                   key={index}
                   ref={index === messages.length - 1 ? lastMessageRef : null}
                   className={`
-                    p-8 w-full flex items-start gap-x-8 rounded-lg
-                    ${message.role === "user" ? "bg-white border border-black/10" : "bg-muted"}
+                    p-8 w-full my-2 flex items-start gap-x-8 rounded-lg
+                    ${message.role === "user" ? "bg-white dark:bg-[#2f053c] border border-black/10" : "bg-muted"}
                   `}
                 >
                   {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
@@ -144,13 +145,14 @@ const CodePage = () => {
             md:px-8
             focus-within:shadow-sm
             grid
+            p-2
             grid-cols-12
             "
           >
             <FormField
               name="prompt"
               render={({ field }) => (
-                <FormItem className="col-span-12 lg:col-span-10">
+                <FormItem className="col-span-12 max-md:mb-1 lg:col-span-10">
                   <FormControl className="m-0 p-0">
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
@@ -162,7 +164,7 @@ const CodePage = () => {
                 </FormItem>
               )}
             />
-            <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+            <Button className="col-span-12  lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
               Generate
             </Button>
           </form>
