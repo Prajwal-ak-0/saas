@@ -58,7 +58,7 @@ const Hero = () => {
                 <div className='h-10'>
                     {/* MOBILE NAVBAR */}
                 </div>
-                <div className='pl-1 sm:pt-16 mt-12 mx-auto w-fit'>
+                <div className='pl-1 sm:pt-16 mt-8 mx-auto w-fit'>
                     <h1 className='font-semibold sm:text-6xl text-4xl'>
                         Welcome to :
                     </h1>
@@ -93,20 +93,14 @@ const Hero = () => {
                 </div>
 
                 <div className='w-full px-12 mt-4'>
-                    <h1 className='font-medium text-center text-2xl sm:text-3xl'>
+                    <h1 className='font-medium text-center text-xl sm:text-3xl'>
                         <span className=' text-[#D801CF] font-extrabold text-2xl sm:text-4xl'>&quot; </span> Forge the future with AI Studio,
                         Where Intelligence meets Innovation. <span className='text-[#D801CF] font-extrabold text-2xl sm:text-4xl -mt-2 '> &quot;</span>
                     </h1>
                 </div>
-
-                <div className=''>
-                    <Features />
-                </div>
             </div>
 
-            <div className='max-lg:hidden -mt-8'>
-                <Features />
-            </div>
+            
         </div>
     )
 }

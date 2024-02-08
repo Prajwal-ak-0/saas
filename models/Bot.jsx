@@ -42,10 +42,89 @@ export function Bot(props) {
                         material={materials.holo1}
                       />
                     </group>
+                    <group
+                      name="pPipe4"
+                      position={[0, -0.429, 0]}
+                      rotation={[0, -0.311, 0]}
+                    >
+                      <mesh
+                        name="pPipe4_holo1_0"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.pPipe4_holo1_0.geometry}
+                        material={materials.holo1}
+                      />
+                      <group name="MASH1_ReproMesh2" position={[0, 0.429, 0]}>
+                        <mesh
+                          name="MASH1_ReproMesh2_holo1_0"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.MASH1_ReproMesh2_holo1_0.geometry}
+                          material={materials.holo1}
+                        />
+                      </group>
+                    </group>
+                    <group
+                      name="pPipe2"
+                      position={[0, -0.576, 0]}
+                      rotation={[0, 0.311, 0]}
+                    >
+                      <mesh
+                        name="pPipe2_holo1_0"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.pPipe2_holo1_0.geometry}
+                        material={materials.holo1}
+                      />
+                      <group
+                        name="MASH1_ReproMesh3"
+                        position={[0, 0.576, 0]}
+                        scale={[0.819, 0.804, 0.819]}
+                      >
+                        <mesh
+                          name="MASH1_ReproMesh3_holo1_0"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.MASH1_ReproMesh3_holo1_0.geometry}
+                          material={materials.holo1}
+                        />
+                      </group>
+                      <group
+                        name="pPipe3"
+                        rotation={[0, 0.684, 0]}
+                        scale={0.856}
+                      >
+                        <mesh
+                          name="pPipe3_holo1_0"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.pPipe3_holo1_0.geometry}
+                          material={materials.holo1}
+                        />
+                      </group>
+                    </group>
+                    <group name="pPipe1" rotation={[0, -0.311, 0]}>
+                      <mesh
+                        name="pPipe1_holo1_0"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.pPipe1_holo1_0.geometry}
+                        material={materials.holo1}
+                      />
+                      <group name="MASH1_ReproMesh1" scale={[1.033, 1, 1.033]}>
+                        <mesh
+                          name="MASH1_ReproMesh1_holo1_0"
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.MASH1_ReproMesh1_holo1_0.geometry}
+                          material={materials.holo1}
+                        />
+                      </group>
+                    </group>
                   </group>
                   <group
                     name="group36"
-                    position={[0.33, -1.4, -0.099]}
+                    position={[0.33, 0, -0.099]}
                     rotation={[-Math.PI, -0.142, -Math.PI]}
                     scale={0.989}
                   >

@@ -93,28 +93,10 @@ export const topservices = [
         icon: Image
     },
     {
-        title: 'Language Translator',
-        description: 'Our Language Translator Service is the key to unlocking the power of natural language processing. Extract the most important information from your document, and save time. From translating document to extracting keywords, our service does all.',
-        link: '/language',
-        icon: LanguagesIcon
-    },
-    {
-        title: 'Pdf Summarizer',
-        description: 'Our Pdf Summarizer Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
-        link: '/pdf',
-        icon: FileText
-    },
-    {
         title: 'Code Generator',
         description: 'Our Code Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your documents, and save time. From summarizing documents to extracting keywords, our service does it all.',
         link: '/code',
         icon: Code
-    },
-    {
-        title: 'Text ➡️ Audio',
-        description: 'Our Text to Audio Generator Service is the key to unlocking the power of natural language processing. Extract the most important information from your document, and save time. From summarizing document to extracting keywords, our service does all.',
-        link: '/audio',
-        icon: FileAudio
     }
 ]
 
@@ -122,7 +104,7 @@ const TopServices = () => {
     return (
         <div className=''>
             <div className=''>
-                <h1 className='sm:text-4xl text-xl font-bold pl-4 '>
+                <h1 className='sm:text-4xl text-2xl ml-4  font-bold pl-2 mt-8'>
                     Top Service&apos;s:
                 </h1>
             </div>
