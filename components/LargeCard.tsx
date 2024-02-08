@@ -30,7 +30,7 @@ const LargeCard = ({ index, children }: { index: number; children: ReactNode }) 
       initial={{ opacity: 0, y: 50 }} // Initial animation state
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animation when card is in viewport
       transition={{ duration: 0.5, ease: 'easeInOut' }} // Animation duration and easing
-      className='w-[30%] my-auto items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'
+      className='w-[30%] my-auto items-center mx-auto mt-8 bg-opacity-50 backdrop-filter backdrop-blur-md p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'
     >
       {children}
     </motion.div>

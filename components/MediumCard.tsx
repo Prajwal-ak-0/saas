@@ -23,24 +23,22 @@ const MediumCard: React.FC<FeatureCardProps> = ({
             }
         };
 
-        // Add event listener for scroll
         window.addEventListener('scroll', handleScroll);
 
-        // Cleanup function
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []); // No dependencies, runs only once
+    }, []); 
 
     return (
         <motion.div
             ref={cardRef}
-            initial={{ opacity: 0, y: 50 }} // Initial animation state
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animation when card is in viewport
-            transition={{ duration: 0.5, ease: 'easeInOut' }} // Animation duration and easing
-            className='items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-xl bg-neutral-200 dark:bg-[#080a35]'
+            initial={{ opacity: 0, y: 50 }} 
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className='items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md p-4 rounded-xl bg-neutral-200 dark:bg-[#080a35]'
         >
-            <div className='items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md border border-gray-300 p-4 rounded-xl bg-neutral-200 dark:bg-[#080a35]'>
+            <div className='items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md p-4 rounded-xl bg-neutral-200 dark:bg-[#080a35]'>
                 <h1 className='text-[14px] sm:text-[18px]'>
                     <span className='font-semibold text-[16px] sm:text-[20px]'>
                         {heading}<br />
