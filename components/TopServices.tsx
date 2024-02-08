@@ -1,8 +1,6 @@
 import React from 'react'
 import ServiceCard from './ServiceCard'
 import { MessageSquare, Eye, Image, FileText, FileAudio, Code, Video, Music, LanguagesIcon } from 'lucide-react'
-import { title } from 'process'
-import { link } from 'fs'
 
 export const services = [
     {
@@ -108,7 +106,7 @@ const TopServices = () => {
                     Top Service&apos;s:
                 </h1>
             </div>
-            <div className='grid grid-rows-1 md:grid-cols-3 gap-2 lg:mx-12 md:mx-6 my-4 sm:my-8'>
+            <div className='grid grid-rows-1 md:grid-cols-3 lg:gap-8 gap-2 lg:mx-12 md:mx-6 my-4 mx-8 sm:my-8'>
                 {topservices.map((service, idx) => (
                     <div key={idx} className=''>
                         <ServiceCard

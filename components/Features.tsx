@@ -11,7 +11,7 @@ const Features = () => {
       {/* LARGE DEVEICES */}
       <div className='max-lg:hidden mt-16'>
         <h1 className='text-5xl font-bold pl-16 '>Feature&apos;s Highlights :</h1>
-        <div className='w-1/3 items-center mx-auto mt-8 bg-opacity-50  backdrop-blur-md border  p-6 rounded-lg bg-neutral-200 dark:bg-[#080a35]'>
+        <div className='w-1/3 items-center mx-auto mt-8 bg-opacity-50  backdrop-blur-md border  p-6 rounded-lg bg-neutral-200 dark:bg-[#4a095f]'>
           <h1>
             <span className='font-semibold'>1. AI at Your Fingertips :<br /></span>
             From text and image processing to code generation, access a suite of AI services effortlessly.

@@ -36,9 +36,9 @@ const MediumCard: React.FC<FeatureCardProps> = ({
             initial={{ opacity: 0, y: 50 }} 
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className='items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md p-4 rounded-xl bg-neutral-200 dark:bg-[#080a35]'
+            className='items-center mx-auto mt-4 bg-opacity-50 backdrop-filter backdrop-blur-md p-4 rounded-xl bg-neutral-200 dark:bg-[#4a095f]'
         >
-            <div className='items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md p-4 rounded-xl bg-neutral-200 dark:bg-[#080a35]'>
+            <div className='items-center mx-auto  bg-opacity-50 backdrop-filter backdrop-blur-md p-4 rounded-xl bg-neutral-200 dark:bg-[#4a095f]'>
                 <h1 className='text-[14px] sm:text-[18px]'>
                     <span className='font-semibold text-[16px] sm:text-[20px]'>
                         {heading}<br />
