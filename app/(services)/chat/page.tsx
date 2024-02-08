@@ -83,8 +83,8 @@ const ConversationPage = () => {
   }
 
   return (
-    <div className="">
-      <div className="pt-4">
+    <div className="h-full">
+      <div className="pt-8 mb-12">
         <Heading
           title="Conversation"
           description="Our most advanced conversation model."
@@ -97,7 +97,7 @@ const ConversationPage = () => {
           <div className="space-y-2">
             {isLoading && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-                <div className="p-8 z-10 rounded-lg w-full max-w-xs bg-white">
+                <div className="p-8 z-10 rounded-lg w-full max-w-xs ">
                   <Loader />
                 </div>
               </div>
@@ -105,7 +105,7 @@ const ConversationPage = () => {
             {messages.length === 0 && !isLoading ? (
               <>
                 <MessageModel />
-                <div className="flex flex-col gap-y-4 h-[calc(75vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
+                <div className="flex flex-col  gap-y-4 h-[calc(75vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
                   {messages.map((message, index) => (
                     <div
                       key={index}
@@ -125,14 +125,14 @@ const ConversationPage = () => {
               </>
             ) : (
               <>
-                <div className="flex flex-col gap-y-4 h-[calc(94vh-200px)] sm:h-[calc(100vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
+                <div className="flex flex-col gap-y-4 h-[calc(88vh-200px)] mb-4 sm:h-[calc(100vh-200px)] overflow-y-auto" ref={messagesContainerRef}>
                   {messages.map((message, index) => (
                     <div
                       key={index}
                       ref={index === messages.length - 1 ? lastMessageRef : null}
                       className={cn(
                         "p-4 w-full flex items-start gap-x-4 rounded-lg",
-                        message.role === "user" ? "bg-emerald-50 border border-black/10" : "bg-purple-100",
+                        message.role === "user" ? "bg-emerald-50 border dark:bg-[#080a35] border-black/10" : "bg-[#390b49] ",
                       )}
                     >
                       {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
@@ -167,7 +167,7 @@ const ConversationPage = () => {
               <FormField
                 name="prompt"
                 render={({ field }) => (
-                  <FormItem className="col-span-12 lg:col-span-10">
+                  <FormItem className="col-span-12 mt-2 lg:col-span-10">
                     <FormControl className="m-0 p-0">
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
@@ -179,8 +179,7 @@ const ConversationPage = () => {
                   </FormItem>
                 )}
               />
-              {/* Submit Button */}
-              <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+              <Button className="col-span-12 m-2 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
                 Generate
               </Button>
             </form>

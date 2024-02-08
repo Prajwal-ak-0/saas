@@ -30,8 +30,8 @@ const MessageModel = () => {
                         </Suspense>
                         <Preload all />
                     </Canvas>
-                    <h1 className=' text-center font-semibold text-2xl text-neutral-600 '>
-                        Start your Conversation!
+                    <h1 className=' text-center font-semibold text-3xl text-neutral-100 '>
+                        Start your Conversation !
                     </h1>
                 </div>
             </div>
